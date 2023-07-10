@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS EVEN ODD</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+  
+	<h1>JS EVEN ODD CALCULATOR</h1>
+	<div class="container">
+		
+		
+				<form onsubmit="conditionCheck(); return false;">
+			<input type="number" name="number" placeholder="Enter a Number here" id="userinput" required><br>
+			<button type="submit" name="Check" class="btn1">Check</button> 
+			<button type="RESET" class="btn2">Clear</button>
+			<h2 id="result"></h2>
+		</form>
+
+		
+	</div>
+	
+ 
+
+<script>
+	function conditionCheck() {
+	    let number= +document.querySelector("#userinput").value;
+	    if (number%2===0) {
+	    	document.querySelector("#result").innerHTML+= `${number +  " is an EVEN  number"}`;
+	    } else{
+	    	document.querySelector("#result").innerHTML=`${number +  " is an ODD  number"}`;
+	    }
+	}
+
+
+
+</script>
+</body>
+</html>
